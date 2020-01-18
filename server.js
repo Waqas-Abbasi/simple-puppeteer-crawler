@@ -13,6 +13,7 @@ const puppeteer = require('puppeteer');
     //Takes screenshot of the page after navigating there
     await page.screenshot({path: 'example.png'});
 
+    //Finds the first element with the id 'hplogo' and returns the source attribute of that element
     const googleLogo = await page.$eval('#hplogo', img => img.src);
     console.log(googleLogo);
 
